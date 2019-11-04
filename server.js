@@ -51,7 +51,7 @@ server.delete('/api/:id', (req, res) => {
     .where({ id: req.params.id })
     .del()
     .then(count => res.status(200).json({ message: `Deleted records: ${count}` }))
-    .catch(err => res.status(500).json({ message: 'Failed to get account' }))
+    .catch(err => res.status(500).json({ message: 'Failed to retrieve account' }))
 });
 
 
